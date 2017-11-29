@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "16714083044",
+    "firebase_url": "https://vitt-20c7f.firebaseio.com",
+    "project_id": "vitt-20c7f",
+    "storage_bucket": "vitt-20c7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16714083044:android:a5743b75d7df62bf",
+        "android_client_info": {
+          "package_name": "com.finance.personal.vitt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16714083044-ejj4dv6qr4mqre7rg55t4g1uqt1qmji5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGpWgk9eDIvafVY-0E5DQ4HP6rBTgp72A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0F8E0"
+    tools:context="com.finance.personal.vitt.AboutUs">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        >
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="100dp"
+            android:text="About Us!!"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+
+            />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="10dp"
+            android:text="This application is made as a part of
+  software enginnering course in semester five"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

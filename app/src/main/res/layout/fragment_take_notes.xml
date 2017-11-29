@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0F8E6"
+    tools:context="com.finance.personal.vitt.TakeNotes">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentStart="true"
+        android:background="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:id="@+id/listView" />
+
+    <EditText
+        android:id="@+id/notetext"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/listView"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="       Enter your text here!!"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/notesbt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/notetext"
+        android:layout_alignBottom="@+id/notetext"
+        android:layout_alignParentEnd="true"
+        android:text="Add" />
+
+
+</RelativeLayout>

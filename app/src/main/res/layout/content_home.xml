@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.finance.personal.vitt.HomeActivity"
+    android:background="#B0F8E6"
+    tools:showIn="@layout/app_bar_home">
+
+    <FrameLayout
+        android:id="@+id/content_fragment"
+        android:layout_width="360sp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardView3"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="22dp">
+
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingadd"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/stat_notify_more" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="45dp"
+        android:id="@+id/cardView3" >
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3sp"
+            android:layout_marginStart="10sp"
+
+            />
+
+        <TextView
+            android:id="@+id/limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cardView3"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="40dp"
+            android:text="Exp. Limit:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cardView3"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="75dp"
+            android:text="Amount Left:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/amttotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="3sp"
+             />
+
+        <TextView
+            android:id="@+id/amtlimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="40sp"
+            />
+
+        <TextView
+            android:id="@+id/amtleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190sp"
+            android:layout_marginTop="75sp"
+            />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/dttext"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/cardView3"
+        android:layout_marginStart="100dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="16dp"
+        />
+
+</RelativeLayout>
