@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.finance.personal.vitt.Addexpense">
+
+
+    <TextView
+        android:id="@+id/Addhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="80sp"
+        android:text="Add Your Expenses Here"
+        android:textSize="20dp"
+        android:textStyle="bold"
+         />
+
+    <EditText
+        android:id="@+id/amountspend"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="350dp"
+        android:inputType="numberDecimal"
+        android:hint="Amount spend"
+        android:paddingLeft="20dp"
+        android:layout_marginStart="80sp"
+         />
+
+    <Button
+        android:id="@+id/addamt"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="120dp"
+        android:text="Save"
+         />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompletechoice"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290sp"
+        android:layout_marginStart="80sp"
+        android:hint="Your Choice Here"
+        android:paddingLeft="20dp"
+         />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="350sp"
+        android:layout_height="220sp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="50sp">
+
+        <ImageView
+            android:id="@+id/groceries"
+            android:layout_width="75sp"
+            android:layout_height="75sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="2sp"
+            app:srcCompat="@drawable/groceries" />
+
+        <ImageView
+            android:id="@+id/travel"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="150sp"
+            android:layout_marginTop="2sp"
+            app:srcCompat="@drawable/travel" />
+
+        <ImageView
+            android:id="@+id/misc"
+            android:layout_width="75sp"
+            android:layout_height="75sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="270sp"
+            android:layout_marginTop="2sp"
+            app:srcCompat="@drawable/misc" />
+
+        <ImageView
+            android:id="@+id/medcine"
+            android:layout_width="75sp"
+            android:layout_height="75sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="75sp"
+            app:srcCompat="@drawable/medicines" />
+
+        <ImageView
+            android:id="@+id/book"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="270sp"
+            android:layout_marginTop="80sp"
+            app:srcCompat="@drawable/books" />
+
+        <ImageView
+            android:id="@+id/recharge"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="150sp"
+            app:srcCompat="@drawable/recharge" />
+
+        <ImageView
+            android:id="@+id/food"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="150sp"
+            android:layout_marginTop="150sp"
+            app:srcCompat="@drawable/food" />
+
+        <ImageView
+            android:id="@+id/party"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="270sp"
+            android:layout_marginTop="150sp"
+            app:srcCompat="@drawable/party" />
+
+        <ImageView
+            android:id="@+id/personal"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_gravity="top"
+            android:layout_marginStart="150sp"
+            android:layout_marginTop="80sp"
+            app:srcCompat="@drawable/personal" />
+
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>
