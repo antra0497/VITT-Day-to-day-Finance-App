@@ -39,20 +39,12 @@ public class LoginActivity extends AppCompatActivity {
         mPasswordField = (EditText)findViewById(R.id.password);
         mAuth = FirebaseAuth.getInstance();
 
-
-//        signin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent ia = new Intent(LoginActivity.this, HomeActivity.class);
-//                startActivity(ia);
-//            }
-//        });
-
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
+
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             }
         });
 
@@ -74,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                           // FirebaseUser user = mAuth.getCurrentUser();
                             //mStatusTextView.setText(getString(R.string.b, user.getEmail(), user.isEmailVerified()));
                             //mDetailTextView.setText(getString(R.string.a, user.getUid()));
 

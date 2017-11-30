@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,23 +20,21 @@
         android:id="@+id/notetext"
         android:layout_width="250dp"
         android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/listView"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="435sp"
         android:background="#FFFFFF"
         android:ems="10"
-        android:hint="       Enter your text here!!"
-        android:inputType="textPersonName" />
+        android:hint="Enter your text here!!"
+        android:paddingLeft="45dp"
+         />
 
     <Button
         android:id="@+id/notesbt"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/notetext"
-        android:layout_alignBottom="@+id/notetext"
-        android:layout_alignParentEnd="true"
+        android:layout_marginStart="280sp"
+        android:layout_marginTop="430sp"
         android:text="Add" />
 
 
-</RelativeLayout>
+</FrameLayout>

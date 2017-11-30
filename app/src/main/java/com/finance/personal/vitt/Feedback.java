@@ -33,24 +33,21 @@ public class Feedback extends Fragment {
         to=(EditText)view.findViewById(R.id.Eto);
         sub=(EditText)view.findViewById(R.id.Esub);
         mesg=(EditText)view.findViewById(R.id.Mesg);
+        to.setText("archit.kaila@gmail.com");
 
-        send.setOnClickListener(new OnClickListener() {
+         send.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                String toS="antra.tripath@st.niituniversity.in" ;
                 String subS= sub.getText().toString();
                 String mesgS= mesg.getText().toString();
 
-                Intent email=new Intent(Intent.ACTION_SEND );
-                email.putExtra(Intent.EXTRA_EMAIL,toS );
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.setType("text/html");
+                email.putExtra(Intent.EXTRA_EMAIL, new String[] {"archit.kaila@gmail.com"});
                 email.putExtra(Intent.EXTRA_SUBJECT,subS );
                 email.putExtra(Intent.EXTRA_TEXT,mesgS );
 
-                email.setType("Plain Text");
-
-                Intent ss= new Intent(Intent.ACTION_VIEW ,Uri.parse("http://www.gmail.com"));
-                startActivity(ss);
+                 startActivity(Intent.createChooser(email,"Select Email app"));
 
             }
 

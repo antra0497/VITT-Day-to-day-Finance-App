@@ -8,7 +8,7 @@
         android:id="@+id/card"
         android:layout_width="340dp"
         android:layout_height="420dp"
-        android:layout_marginLeft="23dp"
+        android:layout_marginLeft="19dp"
         android:layout_marginTop="19dp" >
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_marginStart="75dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="antra.tripathi@st.niituniversity.in" />
+             />
 
         <TextView
             android:id="@+id/sub"
@@ -62,10 +62,12 @@
             android:layout_height="310dp"
             android:layout_marginTop="100dp"
             android:layout_marginStart="15dp"
-            android:background="#B0F8E6"
+            android:background="#3ae5e8"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="            Enter your message here!!" />
+            android:hint="Enter your message here!!"
+            android:paddingLeft="45dp"
+            />
 
 
     </android.support.v7.widget.CardView>

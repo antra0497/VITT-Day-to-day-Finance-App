@@ -1,9 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B0F8E6"
-    tools:context="com.finance.personal.vitt.Signout">
+    android:background="#3ae5e8"
+   >
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -21,7 +21,7 @@
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signoutbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
