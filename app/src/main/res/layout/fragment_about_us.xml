@@ -8,7 +8,7 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="340dp"
-        android:layout_height="200dp"
+        android:layout_height="270dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
@@ -33,13 +33,18 @@
             android:id="@+id/textView7"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
             android:layout_marginTop="50dp"
-            android:layout_marginStart="10dp"
-            android:text="This application is made as a part of
-  software enginnering course in semester five"
+            android:fontFamily="cursive"
+            android:text="This application is made as a part of software enginnering course in semester five
+
+Contributors: Antra, Ayushi
+Version:1.0
+
+Motive: is to help our user to maintain simple but effective log of daily expenses."
             android:textAlignment="center"
-            android:textStyle="italic"
-            />
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
     </android.support.v7.widget.CardView>
 

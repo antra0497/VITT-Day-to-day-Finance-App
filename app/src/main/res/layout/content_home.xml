@@ -15,28 +15,39 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true">
+
+
     </FrameLayout>
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingadd"
-        android:layout_width="50sp"
-        android:layout_height="50sp"
-        android:layout_marginStart="300sp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="21dp"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/stat_notify_more" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginStart="100sp"
+        android:layout_marginTop="200sp"
+        android:layout_centerHorizontal="true"
+        />
 
+    <Button
+        android:id="@+id/addexpense"
+        android:layout_width="130sp"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:background="#FFFFFF"
+        />
 
-        <TextView
+    <TextView
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginTop="50sp"
-            android:text="Total Amount:"
-            android:textSize="15sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="70sp"
+            android:text="Total Amount  :"
+            android:textSize="20sp"
             android:textStyle="bold"
 
             />
@@ -45,20 +56,20 @@
             android:id="@+id/limit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginTop="70dp"
-            android:text="Exp. Limit:"
-            android:textSize="15sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="90dp"
+            android:text="Exp. Limit  :"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10sp"
-            android:layout_marginTop="90dp"
-            android:text="Amount Left:"
-            android:textSize="15sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="110dp"
+            android:text="Amount Left  :"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -66,27 +77,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
-            android:layout_marginTop="50sp" />
+            android:layout_marginTop="70sp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/amtlimit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
-            android:layout_marginTop="70sp" />
+            android:layout_marginTop="90sp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/amtleft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190sp"
-            android:layout_marginTop="90sp" />
+            android:layout_marginTop="110sp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
 
     <TextView
         android:id="@+id/dttext"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="100dp"
         android:background="#FFFFFF"

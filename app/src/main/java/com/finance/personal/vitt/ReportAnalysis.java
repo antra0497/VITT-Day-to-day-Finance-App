@@ -9,21 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ReportAnalysis.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ReportAnalysis#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ReportAnalysis extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_report_analysis, null);
+        return inflater.inflate(R.layout.fragment_report_analysis, container,false);
     }
 
     @Override

@@ -51,16 +51,18 @@ public class TakeNotes extends Fragment {
                 @Override
                 public void onClick(View view) {
 
-                    String str=notes.getText().toString();
-                    list.add(str);
+                    String noted= notes.getText().toString();
+                    list.add(noted);
+
+                    ArrayAdapter <String> lvAdapter = new ArrayAdapter<String>(
+                            getActivity(),android.R.layout.simple_list_item_1,list );
+
+                    lv.setAdapter(lvAdapter);
+
                     }
                 });
 
 
-        ArrayAdapter <String> lvAdapter = new ArrayAdapter<String>(
-                getActivity(),android.R.layout.simple_list_item_1,list );
-
-        lv.setAdapter(lvAdapter);
 
         }
 }

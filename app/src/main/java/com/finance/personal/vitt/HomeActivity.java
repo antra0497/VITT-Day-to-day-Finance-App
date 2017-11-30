@@ -1,7 +1,7 @@
 package com.finance.personal.vitt;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,11 +10,12 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseUser;
@@ -37,9 +38,9 @@ public class HomeActivity extends AppCompatActivity
     NavigationView navigationView = null;
     Toolbar toolbar = null;
     Fragment fragment= null;
-    FloatingActionButton addexpense;
-    CardView cd;
     TextView totA,limA,leftA,datetime, tot,lim,left;
+    Button addexpense;
+    ProgressBar progressBar;
 
 
     @Override
@@ -51,7 +52,6 @@ public class HomeActivity extends AppCompatActivity
         userEmail = currentUser.getEmail();
         db = FirebaseFirestore.getInstance().collection("UserData").document(userEmail);
 
-        addexpense=(FloatingActionButton)findViewById(R.id.floatingadd);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Home Page");
         setSupportActionBar(toolbar);
@@ -64,9 +64,10 @@ public class HomeActivity extends AppCompatActivity
         lim=(TextView)findViewById(R.id.limit);
         left=(TextView)findViewById(R.id.left);
         datetime=(TextView)findViewById(R.id.dttext);
+        addexpense=(Button)findViewById(R.id.addexpense);
+        progressBar=(ProgressBar)findViewById(R.id.progressBar);
 
-
-       // Date currentTime = Calendar.getInstance().getTime();
+        // Date currentTime = Calendar.getInstance().getTime();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,6 +77,15 @@ public class HomeActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        addexpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, Addexpense.class));
+            }
+
+        });
+
     }
 
     @Override
@@ -99,20 +109,21 @@ public class HomeActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
 
-            db.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-                @Override
-                public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
-                    if (documentSnapshot.exists()) {
-                        String budget = (String) documentSnapshot.get("Total_budget");
-                        String limit = (String) documentSnapshot.get("Limit_budget");
+        db.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
+                if (documentSnapshot.exists()) {
+                    String budget = (String) documentSnapshot.get("Total_budget")+"  Rs";
+                    String limit = (String) documentSnapshot.get("Limit_budget")+"  Rs";
 //                        String mAge = (String) documentSnapshot.get("age");
 //                        String mAddress = (String) documentSnapshot.get("address");
 
-                        totA.setText(budget);
-                        limA.setText(limit);
-                    }
+                    totA.setText(budget);
+                    limA.setText(limit);
+
                 }
-            });
+            }
+        });
     }
 
     @Override
@@ -127,7 +138,8 @@ public class HomeActivity extends AppCompatActivity
 
             fragment= new Notification();
             toolbar.setTitle("Notifications");
-            addexpense.hide();
+            addexpense.setVisibility(View.INVISIBLE);
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -147,7 +159,7 @@ public class HomeActivity extends AppCompatActivity
             // Handle the camera action
             fragment= new ReportAnalysis();
             toolbar.setTitle("Report Analysis");
-            addexpense.hide();
+            addexpense.setVisibility(View.INVISIBLE);
             datetime.setVisibility(View.INVISIBLE);
             totA.setVisibility(View.INVISIBLE);
             limA.setVisibility(View.INVISIBLE);
@@ -156,13 +168,14 @@ public class HomeActivity extends AppCompatActivity
             tot.setVisibility(View.INVISIBLE);
             lim.setVisibility(View.INVISIBLE);
             left.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.INVISIBLE);
 
         }
         else if (id == R.id.nav_gallery)
         {
-           fragment= new TakeNotes();
+            fragment= new TakeNotes();
             toolbar.setTitle("Take Notes");
-            addexpense.hide();
+            addexpense.setVisibility(View.INVISIBLE);
             datetime.setVisibility(View.INVISIBLE);
             totA.setVisibility(View.INVISIBLE);
             limA.setVisibility(View.INVISIBLE);
@@ -171,13 +184,14 @@ public class HomeActivity extends AppCompatActivity
             tot.setVisibility(View.INVISIBLE);
             lim.setVisibility(View.INVISIBLE);
             left.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.INVISIBLE);
 
         }
         else if (id == R.id.nav_slideshow)
         {
             fragment= new Signout();
             toolbar.setTitle("Signout");
-            addexpense.hide();
+            addexpense.setVisibility(View.INVISIBLE);
             datetime.setVisibility(View.INVISIBLE);
             totA.setVisibility(View.INVISIBLE);
             limA.setVisibility(View.INVISIBLE);
@@ -186,13 +200,15 @@ public class HomeActivity extends AppCompatActivity
             tot.setVisibility(View.INVISIBLE);
             lim.setVisibility(View.INVISIBLE);
             left.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.INVISIBLE);
 
         }
         else if (id == R.id.nav_share)
         {
             fragment= new AboutUs();
             toolbar.setTitle("About Us ");
-            addexpense.hide();
+            progressBar.setVisibility(View.INVISIBLE);
+            addexpense.setVisibility(View.INVISIBLE);
             datetime.setVisibility(View.INVISIBLE);
             totA.setVisibility(View.INVISIBLE);
             limA.setVisibility(View.INVISIBLE);
@@ -206,7 +222,8 @@ public class HomeActivity extends AppCompatActivity
         {
             fragment= new Feedback();
             toolbar.setTitle("Feedback");
-            addexpense.hide();
+            progressBar.setVisibility(View.INVISIBLE);
+            addexpense.setVisibility(View.INVISIBLE);
             datetime.setVisibility(View.INVISIBLE);
             totA.setVisibility(View.INVISIBLE);
             limA.setVisibility(View.INVISIBLE);

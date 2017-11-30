@@ -22,7 +22,7 @@ public class Feedback extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_feedback, null);
+        return inflater.inflate(R.layout.fragment_feedback,container,false);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Feedback extends Fragment {
         to=(EditText)view.findViewById(R.id.Eto);
         sub=(EditText)view.findViewById(R.id.Esub);
         mesg=(EditText)view.findViewById(R.id.Mesg);
-        to.setText("archit.kaila@gmail.com");
+        to.setText("Vittfinance@gmail.com");
 
          send.setOnClickListener(new OnClickListener() {
             @Override
@@ -43,7 +43,7 @@ public class Feedback extends Fragment {
 
                 Intent email = new Intent(Intent.ACTION_SEND);
                 email.setType("text/html");
-                email.putExtra(Intent.EXTRA_EMAIL, new String[] {"archit.kaila@gmail.com"});
+                email.putExtra(Intent.EXTRA_EMAIL, new String[] {"Vittfinance@gmail.com"});
                 email.putExtra(Intent.EXTRA_SUBJECT,subS );
                 email.putExtra(Intent.EXTRA_TEXT,mesgS );
 
